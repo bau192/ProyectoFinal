@@ -1,0 +1,83 @@
+CREATE (MortalKombatX:VideoGame {name:'Mortal Kombat X', released:2016, Rating:'5'})
+CREATE (StreetFighterV:VideoGame {name:'Street Fighter V', released:2016, Rating:'4'})
+CREATE (WorldofWarcraftt:VideoGame {name:'World of Warcraft', released:2016, Rating:'5'})
+CREATE (Fifa17:VideoGame {name:'Fifa 17', released:2016, Rating:'5'})
+CREATE (Madden17:VideoGame {name:'Madden 17', released:2016, Rating:'4'})
+CREATE (MassEffect:VideoGame {name:'MassEffect', released:2016, Rating:'5'})
+CREATE (Uncharted4:VideoGame {name:'Uncharted 4', released:2016, Rating:'5'})
+CREATE (CallOfDutyBlackOps3:VideoGame {name:'Call Of Duty: Black Ops 3', released:2016, Rating:'4'})
+CREATE (GrandTheftAutoV:VideoGame {name:'Grand Theft Auto V', released:2016, Rating:'5'})
+CREATE (FinalFantasyXV:VideoGame {name:'Final Fantasy XV', released:2016, Rating:'5'})
+
+
+
+CREATE (Sport:Genere {name:'Sport Game'})
+CREATE (RPG:Genere {name:'RPG'})
+CREATE (Shooter:Genere {name:'Shooter Game'})
+CREATE (Adventure:Genere {name:'Advenure Game'})
+CREATE (Fight:Genere {name:'Fighting Game'})
+
+CREATE (PS3:Plataforma {name:'Play Station 3', brand:'Sony'})
+CREATE (PS4:Plataforma {name:'Play Station 4', brand:'Sony'})
+CREATE (Xbox360:Plataforma {name:'Xbox 360', brand:'Microsoft'})
+CREATE (XboxOne:Plataforma {name:'Xbox One', brand:'Microsoft'})
+CREATE (PC:Plataforma {name:'PC', brand:'Microsoft'})
+
+CREATE
+(Fifa17)-[:Available {Downlodable:['Yes']}]->(PS3),
+(Fifa17)-[:Available {Downlodable:['Yes']}]->(PS4),
+(Fifa17)-[:Available {Downlodable:['Yes']}]->(Xbox360),
+(Fifa17)-[:Available {Downlodable:['Yes']}]->(XboxOne),
+(Fifa17)-[:Genere {rated:['5']}]->(Sport),
+
+(Madden17)-[:Available {Downlodable:['Yes']}]->(PS3),
+(Madden17)-[:Available {Downlodable:['Yes']}]->(PS4),
+(Madden17)-[:Available {Downlodable:['Yes']}]->(XboxOne),
+(Madden17)-[:Available {Downlodable:['Yes']}]->(Xbox360),
+(Madden17)-[:Genere {rated:['5']}]->(Sport),
+
+(MassEffect)-[:Available {Downlodable:['Yes']}]->(PS3),
+(MassEffect)-[:Available {Downlodable:['Yes']}]->(Xbox360),
+(MassEffect)-[:Available {Downlodable:['Yes']}]->(PC),
+(MassEffect)-[:Genere {rated:['5']}]->(RPG),
+
+(MortalKombatX)-[:Available {Downlodable:['Yes']}]->(PS4),
+(MortalKombatX)-[:Available {Downlodable:['Yes']}]->(XboxOne),
+(MortalKombatX)-[:Available {Downlodable:['Yes']}]->(PC),
+(MortalKombatX)-[:Genere {rated:['5']}]->(Fight),
+
+(StreetFighterV)-[:Available {Downlodable:['Yes']}]->(PS4),
+(StreetFighterV)-[:Available {Downlodable:['Yes']}]->(PC),
+(StreetFighterV)-[:Genere {rated:['4']}]->(Fight),
+
+(WorldofWarcraftt)-[:Available {Downlodable:['Yes']}]->(PC),
+(WorldofWarcraftt)-[:Genere {rated:['5']}]->(RPG),
+(WorldofWarcraftt)-[:Genere {rated:['5']}]->(Adventure),
+
+(Uncharted4)-[:Available {Downlodable:['Yes']}]->(PS4),
+(Uncharted4)-[:Genere {rated:['4']}]->(RPG),
+(Uncharted4)-[:Genere {rated:['5']}]->(Adventure),
+(Uncharted4)-[:Genere {rated:['4']}]->(Shooter),
+
+(CallOfDutyBlackOps3)-[:Available {Downlodable:['Yes']}]->(PS3),
+(CallOfDutyBlackOps3)-[:Available {Downlodable:['Yes']}]->(PS4),
+(CallOfDutyBlackOps3)-[:Available {Downlodable:['Yes']}]->(XboxOne),
+(CallOfDutyBlackOps3)-[:Available {Downlodable:['Yes']}]->(Xbox360),
+(CallOfDutyBlackOps3)-[:Available {Downlodable:['Yes']}]->(PC),
+(CallOfDutyBlackOps3)-[:Genere {rated:['5']}]->(Shooter),
+
+(GrandTheftAutoV)-[:Available {Downlodable:['Yes']}]->(PS3),
+(GrandTheftAutoV)-[:Available {Downlodable:['Yes']}]->(PS4),
+(GrandTheftAutoV)-[:Available {Downlodable:['Yes']}]->(XboxOne),
+(GrandTheftAutoV)-[:Available {Downlodable:['Yes']}]->(Xbox360),
+(GrandTheftAutoV)-[:Available {Downlodable:['Yes']}]->(PC),
+(GrandTheftAutoV)-[:Genere {rated:['5']}]->(RPG),
+(GrandTheftAutoV)-[:Genere {rated:['4']}]->(Shooter),
+(GrandTheftAutoV)-[:Genere {rated:['4']}]->(Adventure),
+
+
+(FinalFantasyXV)-[:Available {Downlodable:['Yes']}]->(PS4),
+(FinalFantasyXV)-[:Available {Downlodable:['Yes']}]->(XboxOne),
+(FinalFantasyXV)-[:Genere {rated:['5']}]->(RPG),
+(FinalFantasyXV)-[:Genere {rated:['5']}]->(Adventure)
+
